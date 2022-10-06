@@ -5,7 +5,11 @@ import psutil
 from datetime import datetime
 from os import makedirs, path
 
+
+#Name of the key to be pressed
 KEY = "print_screen"
+
+#Path to the folder of saved screenshots. Leave empty to save screenshot to the same folder
 SCREENSHOTS_FOLDER = "C:/Users/Сергей/Pictures/Screenshots/"
 
 while True:
@@ -17,6 +21,7 @@ while True:
     _, pid = win32process.GetWindowThreadProcessId(window)
     pid_name = psutil.Process(pid).name().rsplit('.', 1)[0]
 
+    #If active procces is "explorer", then it's the desktop
     if pid_name == "explorer":
         pid_name = "Desktop"
 
