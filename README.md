@@ -8,9 +8,9 @@ Options
 
 Required modules
 ---
-To work properly, you need to install and import these modules:<br />
-```python
-import pyautogui
-import keyboard
-import psutil
+To work properly, you need to install these modules:<br />
+```bat
+pip install pyautogui
+pip install keyboard
+pip install psutil
 ```
